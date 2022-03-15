@@ -10,7 +10,7 @@ const checkAuth = (req, res, next) => {
         }
         else {
             if (decodeToken.id){
-                req.myId = decodeToken.id;
+                req.myToken = decodeToken;
                 next();
             }
             else{
