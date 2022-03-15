@@ -1,11 +1,12 @@
 const express = require('express');
-const middleware = require('./middleware');
+const middleware = require('./middleware/');
 require('env2')('.env');
 
 const app = express();
 
 middleware(app);
 
-app.set('port', process.env.PORT || 3000);
+// eslint-disable-next-line no-undef
+app.set('port', process.env.PORT || 4000);
 
 module.exports = app;
