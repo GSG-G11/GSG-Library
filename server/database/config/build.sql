@@ -1,6 +1,6 @@
 BEGIN;
 
-DROP TABLE IF EXISTS users, books, favourits CASCADE;
+DROP TABLE IF EXISTS users, books, favourit_books CASCADE;
 
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
