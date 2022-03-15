@@ -1,5 +1,5 @@
 const { sign } = require('jsonwebtoken');
-const checkEmailsQuery = require('../database');
+const {checkEmailsQuery} = require('../database');
 const privateKey = process.env.secretKey;
 const { compare } = require('bcrypt');
 

@@ -13,5 +13,4 @@ module.exports = (app) => {
   app.use(cookieParse())
   app.use(express.static(join(__dirname, '..', '..', 'client')))
   app.use(router);
-
 };

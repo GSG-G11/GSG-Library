@@ -1,3 +1,6 @@
-const checkEmailsQuery = require('./queries/checkEmailsQuery')
+const { getBooksQuery, checkEmailsQuery } = require('./queries/');
 
-module.exports = checkEmailsQuery;
+module.exports = {
+  getBooksQuery,
+  checkEmailsQuery,
+};

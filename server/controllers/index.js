@@ -1,3 +1,7 @@
-const signIn = require('./signincontroller');
+const getBooksController = require('./getBooksConroller');
+const signinController = require('./signinController');
 
-module.exports = signIn;
+module.exports = {
+  signinController,
+  getBooksController,
+};
