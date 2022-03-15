@@ -1,5 +1,11 @@
-const { addToFavouriteController } = require("./favourites");
+const getBooksController = require('./getBooksConroller');
+const signinController = require('./signinController');
+const addToFavouriteController = require('./addToFavouriteController');
+const { checkAuth } = require('./authentication')
 
 module.exports = {
-    addToFavouriteController,
-}
+  signinController,
+  getBooksController,
+  addToFavouriteController,
+  checkAuth
+};
