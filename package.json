@@ -5,13 +5,14 @@
   "main": "index.js",
   "scripts": {
     "start": "NODE_ENV=production node server/index.js",
-    "dev": "NODE_ENV=development nodemon server/index.js",
-    "test": "NODE_ENV=test jest"
+    "dev": "cross-env NODE_ENV=development nodemon server/index.js",
+    "test": "cross-env NODE_ENV=test jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "compression": "^1.7.4",
     "cookie-parser": "^1.4.6",
     "env2": "^2.2.2",
     "express": "^4.17.3",
