@@ -6,7 +6,6 @@ const app = express();
 
 middleware(app);
 
-// eslint-disable-next-line no-undef
-app.set('port', process.env.PORT || 4000);
+app.set('port', process.env.PORT || 9000);
 
 module.exports = app;

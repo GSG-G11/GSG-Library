@@ -27,6 +27,13 @@ CREATE TABLE favourit_books (
     FOREIGN KEY (book_id) REFERENCES books(id)
 );
 
+INSERT INTO users (username, email, password, isAdmin) VALUES (
+    'dev.karamz',
+    'zomlutk@gmail.com',
+    '123',
+    true
+);
+
 INSERT INTO
     books (name, description, category, image, author)
     values
@@ -58,6 +65,11 @@ INSERT INTO
         'shorturl.at/rsSX9',
         'F.Scott Fitzgerald'
     );
+
+
+    INSERT INTO users (username, email,password, isAdmin) VALUES('mohamed', 'mohamed@gmail.com', '123456789',false);
+    INSERT INTO users (username, email,password, isAdmin) VALUES('nada', 'nada@gmail.com', '$2b$10$GFL2sctVwvM8j6MswbwCxuMRdeNrw278dht.g3mt98N.391e6Sx7e',false);
+
 
 COMMIT;
 

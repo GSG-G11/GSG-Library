@@ -4,21 +4,22 @@ const { sign } = require('jsonwebtoken');
 const { addUserQuery, checkEmailsQuery } = require('../database');
 const privateKey = process.env.SECRET_KEY;
 
-const addUser = (req, res) => {
+const addUserController = (req, res) => {
+  console.log(req.body);
   const { id, username, email, password } = req.body;
   checkEmailsQuery(email)
     .then((data) => {
       if (data.rowCount === 0) {
         return bcrypt.hash(password, 10);
       } else {
-        res.json({ msg: 'The email is exist! Login instead!' });
-        return;
+        throw {
+          message: 'The email exist! login instead!',
+          cause: 'user found',
+        };
       }
     })
     .then((hashedPassword) => {
-      if (hashedPassword) {
-        return addUserQuery(username, email, hashedPassword);
-      }
+      return addUserQuery(username, email, hashedPassword);
     })
     .then((data) => {
       sign({ id, username, email }, privateKey, (err, token) => {
@@ -29,11 +30,13 @@ const addUser = (req, res) => {
           return data;
         } else {
           res.json({ msg: 'Error!' });
-          return;
         }
       });
     })
-    .catch((err) => console.log(err));
+    .catch((err) => {
+      if (err.cause == 'user found') res.json(err.message);
+      else res.json('internal server error');
+    });
 };
 
-module.exports = addUser;
+module.exports = addUserController;
