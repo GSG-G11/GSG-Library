@@ -2,9 +2,17 @@ const { sign } = require('jsonwebtoken');
 const {checkEmailsQuery} = require('../database');
 const privateKey = process.env.secretKey;
 const { compare } = require('bcrypt');
-
+const signinValiadtion = require('../validation');
 const signIn = (req, res) => {
-  const { email, password, username ,id} = req.body
+  const { email, password, username, id } = req.body
+  const { error } = signinValiadtion.validate({email, password},{abortEarly: false })
+  if (error) {
+    return res.json({
+    msg: 'please check your email or passwords'
+  })
+  }
+
+
   checkEmailsQuery(email)
     .then((data) => {
       if (!data.rows.length) {
