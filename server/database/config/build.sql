@@ -27,6 +27,13 @@ CREATE TABLE favourit_books (
     FOREIGN KEY (book_id) REFERENCES books(id)
 );
 
+INSERT INTO users (username, email, password, isAdmin) VALUES (
+    'dev.karamz',
+    'zomlutk@gmail.com',
+    '123',
+    true
+);
+
 INSERT INTO
     books (name, description, category, image, author)
     values
