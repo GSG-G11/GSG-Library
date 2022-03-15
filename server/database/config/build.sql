@@ -21,8 +21,10 @@ CREATE TABLE books (
 
 CREATE TABLE favourit_books (
     id SERIAL PRIMARY KEY,
-    user_id INT FOREIGN KEY,
-    book_id INT FOREIGN KEY
+    user_id INT,
+    book_id INT,
+    FOREIGN KEY (user_id) REFERENCES users(id),
+    FOREIGN KEY (book_id) REFERENCES books(id)
 );
 
 INSERT INTO
@@ -56,3 +58,6 @@ INSERT INTO
         'shorturl.at/rsSX9',
         'F.Scott Fitzgerald'
     );
+
+COMMIT;
+
