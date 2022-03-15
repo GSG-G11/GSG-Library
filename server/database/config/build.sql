@@ -59,5 +59,10 @@ INSERT INTO
         'F.Scott Fitzgerald'
     );
 
+
+    INSERT INTO users (username, email,password, isAdmin) VALUES('mohamed', 'mohamed@gmail.com', '123456789',false);
+    INSERT INTO users (username, email,password, isAdmin) VALUES('nada', 'nada@gmail.com', '$2b$10$GFL2sctVwvM8j6MswbwCxuMRdeNrw278dht.g3mt98N.391e6Sx7e',false);
+
+
 COMMIT;
 
