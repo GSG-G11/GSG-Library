@@ -9,6 +9,8 @@ const {
   addToFavouriteController,
   addUserController,
   logoutController,
+  serverError,
+  clientError,
 } = require('../controllers');
 
 router.get('/', (req, res) => {
@@ -25,5 +27,8 @@ router.post('/signup', addUserController);
 router.post('/book/:id/favourite', checkAuth, addToFavouriteController);
 router.get('/logout', checkAuth, logoutController);
 // router.get('/server/error', serverError);
+
+router.use(clientError);
+router.use(serverError);
 
 module.exports = { router };
