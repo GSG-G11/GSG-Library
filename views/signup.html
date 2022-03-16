@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="/css/signup.css">
+    <title>Sign Up</title>
+</head>
+
+<body>
+    <main class="main-section">
+        <div class="back">
+            <img src="/images/header-back.png" alt="header back img" class="header-back">
+            <img src="/images/header-img.png" alt="header img" class="header-img">
+        </div>
+        <div class="container">
+            <div class="header">
+                <h2>Create Account</h2>
+            </div>
+            <div id="form" class="form">
+                <div class="form-control">
+                    <label for="username">Username</label>
+                    <input type="username" placeholder="username" id="username" name="username" required />
+                    <p id="usernameErr" class="error"></p>
+                </div>
+                <div class="form-control">
+                    <label for="email">Email</label>
+                    <input type="email" placeholder="email" id="email" name="email" required />
+                    <p id="emailErr" class="error"></p>
+                </div>
+                <div class="form-control">
+                    <label for="password">Password</label>
+                    <input type="password" placeholder="password" id="password" name="password" required />
+                    <p id="passwordErr" class="error"></p>
+                </div>
+                <button id="signupBtn">Sign up</button>
+                <br>
+                <div class="sign-up">
+                    Already have an account? click <a href="#" class="here">here</a>
+                    <p id="serverError"></p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="/js/validation.js"></script>
+    <script src="/js/index.js"></script>
+</body>
+
+</html>
