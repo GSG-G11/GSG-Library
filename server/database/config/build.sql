@@ -1,4 +1,3 @@
-BEGIN;
 
 DROP TABLE IF EXISTS users, books, favourit_books CASCADE;
 
@@ -69,7 +68,16 @@ INSERT INTO
 
     INSERT INTO users (username, email,password, isAdmin) VALUES('mohamed', 'mohamed@gmail.com', '123456789',false);
     INSERT INTO users (username, email,password, isAdmin) VALUES('nada', 'nada@gmail.com', '$2b$10$GFL2sctVwvM8j6MswbwCxuMRdeNrw278dht.g3mt98N.391e6Sx7e',false);
+    INSERT INTO users (username, email,password, isAdmin) VALUES('Amran', 'amran@gmail.com', '123456amo66',false);
+
+    
+
+    INSERT INTO favourit_books (user_id, book_id) VALUES (1,2);
+    INSERT INTO favourit_books (user_id, book_id) VALUES (3,1);
+    INSERT INTO favourit_books (user_id, book_id) VALUES (2,3);
+    INSERT INTO favourit_books (user_id, book_id) VALUES (4,4);
 
 
+    
 COMMIT;
 

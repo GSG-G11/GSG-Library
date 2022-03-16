@@ -1,0 +1,37 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --primaryColor:#3e56cd;
+    --white:#ffffff;
+    --secondaryColor:#ee7067;
+    --deleteColor:rgb(230, 228, 228);
+    --addColor:#bdd7fc;
+}
+section{
+    margin-top: 20vh;
+    height: 50vh;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+section .book {
+    width: 100px;
+    height: 150px;
+    background-color: var(--primaryColor);
+    position: relative;
+}
+
+.book i {
+    position: absolute;
+    color: red;
+}
+
