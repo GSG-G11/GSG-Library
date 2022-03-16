@@ -7,7 +7,7 @@ const { signupSchema } = require('../validation');
 const privateKey = process.env.SECRET_KEY;
 
 const addUserController = (req, res) => {
-  const { id, username, email, password } = req.body;
+  const { username, email, password } = req.body;
   const { error, value } = signupSchema.validate(
     { username, email, password },
     { abortEarly: false }
@@ -31,6 +31,8 @@ const addUserController = (req, res) => {
         return addUserQuery(username, email, hashedPassword);
       })
       .then((data) => {
+        const { id, username, email } = data.rows[0];
+        console.log(data.rows[0]);
         sign({ id, username, email }, privateKey, (err, token) => {
           if (token) {
             res
