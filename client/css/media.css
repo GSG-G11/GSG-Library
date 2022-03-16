@@ -1,0 +1,248 @@
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    /* Page Heaer */
+    .page-header .navbar-toggler{
+        display: inline-flex;
+    }
+
+    .page-header .navbar-nav .nav-item{
+        margin: 0;
+    }
+
+    .page-header .navbar-nav .nav-item .nav-link::before{
+        display: none;
+    }
+
+    .page-header .btns{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Page Header */
+    .header-sec{
+        margin-top: 0;
+    }
+
+    .header-sec .content-div .page-title{
+        font-size: 2rem;
+    }
+
+    .header-sec .image-div{
+        margin-top: 80px;
+    }
+
+    .header-sec .image-div img {
+        max-width: 100%;
+        transform: translate(0);
+    }
+
+    /* Subjects Sec */
+    .subjects-sec {
+        margin-top: 10rem;
+    }
+
+    .subjects-sec .clm{
+        margin-bottom: 3rem;
+    }
+
+    .slick-prev{
+        left: 0;
+        top: -10px;
+    }
+    .slick-next{
+        left: 20px;
+        top: -10px;
+    }
+
+    /* Article Section */
+    .article-sec:nth-child(3) .clm:nth-child(2){
+        order: -1;
+    }
+
+    .article-sec .image-div{
+        margin-bottom: 2rem;
+    }
+
+     /* Testimonial Section */
+    .testimonial-sec .sec-content{
+        padding: 50px 30px;
+    }
+
+    .testimonial-sec .single-user{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .testimonial-sec .single-user .user-info{
+        margin-top: 1rem;
+        margin-left: 0;
+    }
+
+    /* Page Footer */
+    .page-footer .footer-form{
+        text-align: center;
+    }
+    
+    .footer-form .inpt{
+        display: block;
+        width: 100%;
+    }
+
+    .footer-form .btn{
+        width: 100%;
+    }
+
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    /* Page Heaer */
+    .page-header .navbar-toggler{
+        display: inline-flex;
+    }
+
+    .page-header .navbar-nav .nav-item{
+        margin: 0;
+    }
+
+    .page-header .navbar-nav .nav-item .nav-link::before{
+        display: none;
+    }
+
+    .page-header .btns{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Page Header */
+    .header-sec .image-div{
+        margin-top: 80px;
+    }
+
+    .header-sec .image-div img {
+        max-width: 100%;
+        transform: translate(0);
+    }
+
+    /* Subjects Sec */
+    .subjects-sec {
+        margin-top: 10rem;
+    }
+
+    .subjects-sec .clm{
+        margin-bottom: 3rem;
+    }
+
+    /* Article Section */
+    .article-sec:nth-child(3) .clm:nth-child(2){
+        order: -1;
+    }
+
+    .article-sec .image-div{
+        margin-bottom: 2rem;
+    }
+
+    /* Testimonial Section */
+    .testimonial-sec .sec-content{
+        padding: 50px 30px;
+    }
+
+    .testimonial-sec .single-user{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .testimonial-sec .single-user .user-info{
+        margin-top: 1rem;
+        margin-left: 0;
+    }
+
+    /* Page Footer */
+    .page-footer .footer-form{
+        text-align: center;
+    }
+
+    .footer-form .inpt{
+        display: block;
+        margin: 0 auto .8rem;
+    }
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    /* Page Heaer */
+    .page-header .navbar-toggler{
+        display: inline-flex;
+    }
+
+    .page-header .navbar-nav .nav-item{
+        margin: 0;
+    }
+
+    .page-header .navbar-nav .nav-item .nav-link::before{
+        display: none;
+    }
+
+    .page-header .btns{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Page Header */
+    .header-sec .image-div{
+        margin-top: 80px;
+    }
+
+    .header-sec .image-div img {
+        max-width: 100%;
+        transform: translate(0);
+    }
+    
+    /* Subjects Sec */
+    .subjects-sec {
+        margin-top: 10rem;
+    }
+
+    .subjects-sec .clm{
+        margin-bottom: 3rem;
+    }
+
+    /* Article Section */
+    .article-sec:nth-child(3) .clm:nth-child(2){
+        order: -1;
+    }
+
+    .article-sec .image-div{
+        margin-bottom: 2rem;
+    }
+
+    /* Testimonial Section */
+    .testimonial-sec .single-user{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .testimonial-sec .single-user .user-info{
+        margin-top: 1rem;
+        margin-left: 0;
+    }
+
+    /* Page Footer */
+    .page-footer .footer-form{
+        text-align: center;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}
