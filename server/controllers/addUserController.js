@@ -13,9 +13,8 @@ const addUserController = (req, res) => {
     { abortEarly: false }
   );
   if (error) {
-    res.json({ message: error.details[0].message }).end();
-  }
-  else {
+    res.status(401).json({ message: error.details[0].message }).end();
+  } else {
     checkEmailsQuery(value.email)
       .then((data) => {
         if (data.rowCount === 0) {
@@ -32,21 +31,22 @@ const addUserController = (req, res) => {
       })
       .then((data) => {
         const { id, username, email } = data.rows[0];
-        console.log(data.rows[0]);
         sign({ id, username, email }, privateKey, (err, token) => {
           if (token) {
             res
               .cookie('access_token', token, { httpOnly: true, secure: true })
-              .json({ msg: 'Registered Successfulllly, LOL!' });
+              .status(200)
+              .json({ message: 'Registered Successfully!' });
             return data;
           } else {
-            res.json({ msg: 'Error!' });
+            res.status(500).json({ message: 'Error!' });
           }
         });
       })
       .catch((err) => {
-        if (err.cause == 'user found') res.json(err.message);
-        else res.json('internal server error');
+        if (err.cause == 'user found')
+          res.status(401).json({message : 'The email exist! login instead!'});
+        else res.status(500).json({ message: 'internal server error' });
       });
   }
 };
