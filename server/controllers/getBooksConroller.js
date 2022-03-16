@@ -1,4 +1,4 @@
-const { getBooksQuery } = require('../database/');
+const { getBooksQuery } = require('../database');
 
 const getBooksController = (req, res) => {
   getBooksQuery()
