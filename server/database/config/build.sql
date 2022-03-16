@@ -30,7 +30,7 @@ CREATE TABLE favourit_books (
 INSERT INTO users (username, email, password, isAdmin) VALUES (
     'dev.karamz',
     'zomlutk@gmail.com',
-    '123',
+    '$2b$10$H3wRPgFwfW41kleZr63DYOn1Y8CRRRkTJpxmSX57XwJbVo8ULbyTq',
     true
 );
 
