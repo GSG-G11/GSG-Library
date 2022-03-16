@@ -63,7 +63,7 @@ const addUser = () => {
     .then((response) => response.json())
     .then((res) => {
       if (res.message === 'Registered Successfully!') {
-        window.location.href = '/logged';
+        window.location.href = '/';
       } else if (
         res.message === 'internal server error' ||
         res.message === 'Error!'

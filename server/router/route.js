@@ -14,17 +14,25 @@ const {
 } = require('../controllers');
 
 router.get('/', (req, res) => {
+  res.sendFile(join(__dirname, '..', '..', 'views', 'index.html'));
+});
+
+router.get('/signin', (req, res) => {
+  res.sendFile(join(__dirname, '..', '..', 'views', 'signin.html'));
+});
+
+router.get('/signup', (req, res) => {
   res.sendFile(join(__dirname, '..', '..', 'views', 'signup.html'));
 });
 
-router.get('/logged', (req, res) => {
-  res.sendFile(join(__dirname, '..', '..', 'views', 'main.html'));
+router.get('/favourites', (req, res) => {
+  res.sendFile(join(__dirname, '..', '..', 'views', 'favourite.html'));
 });
 
 router.get('/books/view', getBooksController);
 router.post('/signin', signinController);
 router.post('/signup', addUserController);
-router.post('/book/:id/favourite', checkAuth, addToFavouriteController);
+router.get('/book/:id/favourite', checkAuth, addToFavouriteController);
 router.get('/logout', checkAuth, logoutController);
 // router.get('/server/error', serverError);
 
