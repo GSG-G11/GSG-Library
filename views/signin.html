@@ -5,7 +5,9 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/css/signin.css" />
   <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/signup.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -13,10 +15,13 @@
 </head>
 
 <body>
+  <div class="back">
+    <img src="/images/header-back.png" alt="header back img" class="header-back">
+    <img src="/images/header-img.png" alt="header img" class="header-img">
+  </div>
   <div class="container">
     <div class="header">
       <h2>Sign In</h2>
-      <i class="fa-solid fa-xmark" id="cancel-icon"></i>
     </div>
     <div id="form" class="form">
       <div class="form-control">
@@ -35,8 +40,8 @@
       </div>
       <button id="btn">Sign In</button>
       <br />
-      <div class="sign-up">
-        <a href="/signup">Sign up here..</a>
+      <div class="sign-up">Don't have an account?
+        <a href="/signup" class="here"> here</a>
       </div>
     </div>
   </div>
