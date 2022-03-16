@@ -4,8 +4,9 @@ const addToFavouriteController = (req, res) => {
     userId: req.myToken.id,
     bookId: req.params.id,
   };
-
-  addToFavouriteQuery(myData).then((data) => res.json(data.rows[0]));
+  addToFavouriteQuery(myData)
+    .then(() => res.redirect('/favourites'))
+    .catch((err) => console.log(err));
 };
 
 module.exports = addToFavouriteController;
