@@ -22,10 +22,6 @@ body {
   justify-content: center;
   min-height: 100vh;
   margin: 0;
-  background-image: url('../img/1.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
 }
 
 .container {
@@ -40,7 +36,6 @@ body {
 
 .header {
   border-bottom: 1px solid #f0f0f0;
-  background-color: #f7f7f7;
   padding: 20px 40px;
   display: flex;
   justify-content: space-between;
@@ -50,6 +45,7 @@ body {
 .header h2 {
   margin: 0;
 }
+
 .header i {
   color: var(--orange);
   font-size: 1.5rem;
@@ -140,13 +136,13 @@ body {
   filter: brightness(90%);
 }
 
-.sign-up a{
-    text-decoration: none;
-    color: #212226;
-    padding-top: 10px;
-    pointer:cursor;
-    font-weight: 400;
+.sign-up a {
+  text-decoration: none;
+  color: #212226;
+  padding-top: 10px;
+  pointer: cursor;
+  font-weight: 400;
 }
-.sign-up a:hover{
-    color:#e74c3c ;
+.sign-up a:hover {
+  color: #e74c3c;
 }
