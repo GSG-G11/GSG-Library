@@ -10,14 +10,14 @@ if (node_env === 'production') {
 } else if (node_env === 'development') {
   DB_URL = process.env.DB_URL_DEV;
 } else if (node_env === 'test') {
-  DB_URL = process.env.DB_TESTING_URL;
+  DB_URL = process.env.DB_URL_TEST;
 } else {
   throw new Error('DB_URL NOT FOUND!');
 }
 
 const connection = new Pool({
   connectionString: DB_URL,
-  ssl: false,
+  ssl: node_env === 'production' ? { rejectUnauthorized: false } : false,
 });
 
 module.exports = connection;

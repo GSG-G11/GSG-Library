@@ -1,7 +1,13 @@
-const { getBooksQuery, checkEmailsQuery, addToFavouriteQuery} = require('./queries');
+const {
+  getBooksQuery,
+  checkEmailsQuery,
+  addUserQuery,
+  addToFavouriteQuery,
+} = require('./queries');
 
 module.exports = {
   getBooksQuery,
   checkEmailsQuery,
-  addToFavouriteQuery
+  addUserQuery,
+  addToFavouriteQuery,
 };

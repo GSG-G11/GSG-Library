@@ -1,5 +1,5 @@
 const express = require('express');
-const middleware = require('./middleware');
+const middleware = require('./middleware/');
 require('env2')('.env');
 
 const app = express();

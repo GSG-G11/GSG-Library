@@ -1,6 +1,7 @@
+/* eslint-disable no-undef */
 const { sign } = require('jsonwebtoken');
 const {checkEmailsQuery} = require('../database');
-const privateKey = process.env.secretKey;
+const privateKey = process.env.SECRET_KEY;
 const { compare } = require('bcrypt');
 const signinValiadtion = require('../validation');
 const signIn = (req, res) => {

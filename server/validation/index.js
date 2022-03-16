@@ -1,3 +1,4 @@
-const signinValiadtion = require('./signinSchema');
+const signinValiadtion = require('./signinSchema')
+const signupSchema = require('./signupSchema')
 
-module.exports = signinValiadtion;
+module.exports = { signupSchema, signinValiadtion }

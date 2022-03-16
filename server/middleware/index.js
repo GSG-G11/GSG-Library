@@ -10,6 +10,7 @@ module.exports = (app) => {
   app.use(compression());
   app.disabled('x-powered-by');
   app.use(cookieParse());
+  // eslint-disable-next-line no-undef
   app.use(express.static(join(__dirname, '..', '..', 'client')));
   app.use(router);
 };
